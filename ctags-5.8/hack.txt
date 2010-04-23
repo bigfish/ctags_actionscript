@@ -1,0 +1,24 @@
+
+And now, let's change to the source directory for our next step:
+
+cd ctags-5.7
+
+Step 2: Add ActionScript support to the cTags source:
+
+Now we need to edit two files, source.mak and parsers.h to ensure that ctags knows what it needs to properly parse ActionScript code (Bonus tip: From a terminal window, you can launch files in jEdit by typing open -a jedit filename).
+
+In source.mak, we need to add a line that says "actionscript.c \\" under SOURCES and "actionscript.$(OBJEXT) \\" under OBJECTS.
+
+In parsers.h, we need to add the following line under #define PARSER_LIST:
+ActionScriptParser, \\.
+
+Step 3: Build the ctags binary from source
+
+In the terminal window, make sure you are still in the ctags source directory (and that the actionscript.c you downloaded earlier is there, too) and type:
+
+./configure
+
+If everything works out, you should see a series of "checking for…" lines and eventually, you'll return to a command prompt (and no error messages). If you see error messages, check your work above and try, try again. Otherwise, go ahead and "make" the ctags application:
+
+make
+
