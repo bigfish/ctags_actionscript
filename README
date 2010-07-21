@@ -1,1 +1,10 @@
 ctags source code with modifications to support actionscript 3 code
+
+NB: also replaced version of javascript parser with one which is suited for use with taglist plugin, but not for tags file generation.
+
+USAGE:
+
+cd ctags-5.8
+make clean
+make
+sudo make install
