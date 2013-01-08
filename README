@@ -5,6 +5,6 @@ NB: also replaced version of javascript parser with one which is suited for use 
 USAGE:
 
 cd ctags-5.8
-make clean
+./configure
 make
 sudo make install
